@@ -136,7 +136,8 @@ export class MyDatePicker implements OnChanges, ControlValueAccessor, OnDestroy 
         ariaLabelPrevMonth: <string> "Previous Month",
         ariaLabelNextMonth: <string> "Next Month",
         ariaLabelPrevYear: <string> "Previous Year",
-        ariaLabelNextYear: <string> "Next Year"
+        ariaLabelNextYear: <string> "Next Year",
+        ariaLabelDay: <string> "Select day"
     };
 
     constructor(public elem: ElementRef, private renderer: Renderer, private cdr: ChangeDetectorRef, private localeService: LocaleService, private utilService: UtilService) {
