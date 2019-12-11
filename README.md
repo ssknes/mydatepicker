@@ -254,7 +254,7 @@ Value of the __options__ attribute is a type of [IMyDpOptions](https://github.co
 | __ariaLabelNextMonth__   | Next Month | string | Aria label text of next month button. |
 | __ariaLabelPrevYear__   | Previous Year | string | Aria label text of previous year button. |
 | __ariaLabelNextYear__   | Next Year | string | Aria label text of next year button. |
-| __ariaLabelDay__   | Next Year | string | Aria label text of day button. |
+| __ariaLabelDay__   | Days | string | Aria label text of day button. |
 
 * Example of the options data (not all properties listed):
 ```ts
