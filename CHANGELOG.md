@@ -1,3 +1,14 @@
+# 2.6.7 (2019-12-12)
+
+### Bug Fixes
+
+* none
+
+### Features
+
+* Merged PR: Add support for arial-label attribute on days of the month - #627.
+
+
 # 2.6.6 (2018-09-22)
 
 ### Bug Fixes
