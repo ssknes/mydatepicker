@@ -1,3 +1,14 @@
+# 2.6.8 (2019-12-14)
+
+### Bug Fixes
+
+* none
+
+### Features
+
+* Rendered removed.
+
+
 # 2.6.7 (2019-12-12)
 
 ### Bug Fixes

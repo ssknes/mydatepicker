@@ -1,10 +1,11 @@
 # mydatepicker
 
-**Angular date picker**
-
 __If your Angular version is >= 7.2 you can use a new version ([angular-mydatepicker](https://github.com/kekeh/angular-mydatepicker)) of this component:__ 
 * [repository](https://github.com/kekeh/angular-mydatepicker) 
 * [online demo](https://kekeh.github.io/angular-mydatepicker/) 
+
+
+**Angular date picker**
 
 [![Build Status](https://travis-ci.org/kekeh/mydatepicker.svg?branch=master)](https://travis-ci.org/kekeh/mydatepicker)
 [![codecov](https://codecov.io/gh/kekeh/mydatepicker/branch/master/graph/badge.svg)](https://codecov.io/gh/kekeh/mydatepicker)
