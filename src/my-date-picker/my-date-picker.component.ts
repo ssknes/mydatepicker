@@ -357,6 +357,7 @@ export class MyDatePicker implements OnChanges, ControlValueAccessor, OnDestroy 
 
     setDisabledState(disabled: boolean): void {
         this.opts.componentDisabled = disabled;
+        this.cdr.detectChanges();
     }
 
     registerOnChange(fn: any): void {
@@ -494,6 +495,7 @@ export class MyDatePicker implements OnChanges, ControlValueAccessor, OnDestroy 
     onClickDocument(evt: any): void {
         if (this.showSelector && event.target && this.elem.nativeElement !== event.target && !this.elem.nativeElement.contains(event.target)) {
             this.showSelector = false;
+            this.cdr.detectChanges();
             this.calendarToggle.emit(CalToggle.CloseByOutClick);
 
             this.removeGlobalListener();
