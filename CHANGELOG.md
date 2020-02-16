@@ -1,3 +1,14 @@
+# 2.6.9 (2020-02-16)
+
+### Bug Fixes
+
+* none
+
+### Features
+
+* Merged: added detectChanges call to setDisabledState and onClickDocument #631
+
+
 # 2.6.8 (2019-12-14)
 
 ### Bug Fixes
