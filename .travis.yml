@@ -1,11 +1,26 @@
 language: node_js
 node_js:
-- "6"
-install:
-- npm install
+- if: branch = master
+  - "6"
+- if: branch = angularIvy
+  - "12"
+addons:
+  chrome: stable
+before_script:
+- if: branch = master
+  - npm install
+- if: branch = angularIvy
+  - npm install -g @angular/cli@9.0.7
+  - npm install
 script:
-- gulp all
-- npm test
+- if: branch = master
+  - gulp all
+  - npm test
+- if: branch = angularIvy
+  - npm run test-lib
 after_success:
-- ./node_modules/.bin/codecov  -f test-output/test-output/json/coverage-final.json
+- if: branch = master
+  - ./node_modules/.bin/codecov  -f test-output/coverage/json/coverage-final.json
+- if: branch = angularIvy
+  - ./node_modules/.bin/codecov  -f test-output/mydatepicker/coverage-final.json
 sudo: required
