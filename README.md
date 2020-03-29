@@ -1,9 +1,16 @@
 # mydatepicker
 
+**New datepicker library**
 
 __If your Angular version is >= 7.2 you can use a new version ([angular-mydatepicker](https://github.com/kekeh/angular-mydatepicker)) of this component:__ 
 * [repository](https://github.com/kekeh/angular-mydatepicker) 
 * [online demo](https://kekeh.github.io/angular-mydatepicker/) 
+
+| Library version | Angular version | Branch | Installation |
+| :-------------- | :-------------- | :----- | :----------- |
+| < 9.0.0 | >= 2 and < 9 | master | npm install --save mydatepicker@latest| 
+| >= 9.0.0 | >= 9 | angularIvy | npm install --save mydatepicker@ng9 | 
+
 
 **Angular date picker**
 
