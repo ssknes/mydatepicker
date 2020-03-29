@@ -8,10 +8,10 @@ __If your Angular version is >= 7.2 you can use a new version ([angular-mydatepi
 
 **Version compatibility of this library**
 
-| Library version | Angular version | Branch |
-| :------------ | :------------ | :----- |
-| < 9.0.0 | >= 2 and < 9 | master |
-| >= 9.0.0 | >= 9 | angularIvy |
+| Library version | Angular version | Branch | Installation |
+| :-------------- | :-------------- | :----- | :----------- |
+| < 9.0.0 | >= 2 and < 9 | master | npm install --save mydatepicker@latest| 
+| >= 9.0.0 | >= 9 | angularIvy | npm install --save mydatepicker@ng9 | 
 
 **Angular date picker**
 
