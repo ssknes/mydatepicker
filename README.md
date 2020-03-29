@@ -10,7 +10,7 @@ __If your Angular version is >= 7.2 you can use a new version ([angular-mydatepi
 
 | Library version | Angular version | Branch |
 | :------------ | :------------ | :----- |
-| <= 2.6.9 | >= 2 and < 9 | master |
+| < 9.0.0 | >= 2 and < 9 | master |
 | >= 9.0.0 | >= 9 | angularIvy |
 
 **Angular date picker**
