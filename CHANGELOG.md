@@ -9,7 +9,7 @@
 * Angular 9 version of this library in branch: angularIvy
 
 
-# 9.0.0 (2020-03-30)
+# 9.0.1 (2020-03-30)
 
 ### Bug Fixes
 
