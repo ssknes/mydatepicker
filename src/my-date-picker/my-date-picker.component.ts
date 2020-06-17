@@ -492,7 +492,7 @@ export class MyDatePicker implements OnChanges, ControlValueAccessor, OnDestroy 
         document.removeEventListener("click", this.onClickListener);
     }
 
-    onClickDocument(evt: any): void {
+    onClickDocument(event: any): void {
         if (this.showSelector && event.target && this.elem.nativeElement !== event.target && !this.elem.nativeElement.contains(event.target)) {
             this.showSelector = false;
             this.cdr.detectChanges();
