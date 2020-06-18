@@ -1,3 +1,14 @@
+# 2.6.11 (2020-06-18)
+
+### Bug Fixes
+
+* none
+
+### Features
+
+* Merged: Changed evt to event in onClickDocument function #636
+
+
 # 2.6.9 (2020-02-16)
 
 ### Bug Fixes
