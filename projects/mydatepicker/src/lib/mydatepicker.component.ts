@@ -45,7 +45,10 @@ export class MyDatePicker implements OnChanges, ControlValueAccessor, OnDestroy 
 
     onChangeCb: (_: any) => void = () => { };
     onTouchedCb: () => void = () => { };
-
+    
+    currentSysYear: number;
+    currentThaiYear: number;
+  
     showSelector: boolean = false;
     visibleMonth: IMyMonth = {monthTxt: "", monthNbr: 0, year: 0};
     selectedMonth: IMyMonth = {monthTxt: "", monthNbr: 0, year: 0};
@@ -527,54 +530,77 @@ export class MyDatePicker implements OnChanges, ControlValueAccessor, OnDestroy 
             y = this.selectedDate.year;
             m = this.selectedDate.month;
         }
-        this.visibleMonth = {monthTxt: this.opts.monthLabels[m], monthNbr: m, year: y};
-
+//         this.visibleMonth = {monthTxt: this.opts.monthLabels[m], monthNbr: m, year: y};
+  
+       let thaiYear = y + 543;
+            this.visibleMonth = {monthTxt: this.opts.monthLabels[m], monthNbr: m, year: thaiYear};
         // Create current month
         this.generateCalendar(m, y, true);
     }
 
     onPrevMonth(): void {
         // Previous month from calendar
-        let d: Date = this.getDate(this.visibleMonth.year, this.visibleMonth.monthNbr, 1);
+//         let d: Date = this.getDate(this.visibleMonth.year, this.visibleMonth.monthNbr, 1);
+this.currentSysYear = this.visibleMonth.year - 543;
+        let d: Date = this.getDate(this.currentSysYear, this.visibleMonth.monthNbr, 1);
         d.setMonth(d.getMonth() - 1);
 
         let y: number = d.getFullYear();
         let m: number = d.getMonth() + 1;
 
-        this.visibleMonth = {monthTxt: this.monthText(m), monthNbr: m, year: y};
+//         this.visibleMonth = {monthTxt: this.monthText(m), monthNbr: m, year: y};
+ this.currentThaiYear = y + 543;
+        this.visibleMonth = {monthTxt: this.monthText(m), monthNbr: m, year: this.currentThaiYear};
         this.generateCalendar(m, y, true);
     }
 
     onNextMonth(): void {
         // Next month from calendar
-        let d: Date = this.getDate(this.visibleMonth.year, this.visibleMonth.monthNbr, 1);
+//         let d: Date = this.getDate(this.visibleMonth.year, this.visibleMonth.monthNbr, 1);
+this.currentSysYear = this.visibleMonth.year - 543;
+
+        let d: Date = this.getDate(this.currentSysYear, this.visibleMonth.monthNbr, 1);
         d.setMonth(d.getMonth() + 1);
 
         let y: number = d.getFullYear();
         let m: number = d.getMonth() + 1;
 
-        this.visibleMonth = {monthTxt: this.monthText(m), monthNbr: m, year: y};
+//         this.visibleMonth = {monthTxt: this.monthText(m), monthNbr: m, year: y};
+       this.currentThaiYear = y + 543;
+        this.visibleMonth = {monthTxt: this.monthText(m), monthNbr: m, year: this.currentThaiYear};
         this.generateCalendar(m, y, true);
     }
 
     onPrevYear(): void {
         // Previous year from calendar
+       this.currentSysYear = this.visibleMonth.year - 543;
+
         this.visibleMonth.year--;
-        this.generateCalendar(this.visibleMonth.monthNbr, this.visibleMonth.year, true);
+//         this.generateCalendar(this.visibleMonth.monthNbr, this.visibleMonth.year, true);
+        this.currentSysYear--;
+        this.generateCalendar(this.visibleMonth.monthNbr, this.currentSysYear, true);
     }
 
     onNextYear(): void {
         // Next year from calendar
+this.currentSysYear = this.visibleMonth.year - 543;
         this.visibleMonth.year++;
-        this.generateCalendar(this.visibleMonth.monthNbr, this.visibleMonth.year, true);
+//         this.generateCalendar(this.visibleMonth.monthNbr, this.visibleMonth.year, true);
+        this.currentSysYear++;
+        this.generateCalendar(this.visibleMonth.monthNbr, this.currentSysYear, true);
     }
 
     onTodayClicked(): void {
         // Today button clicked
         let today: IMyDate = this.getToday();
         this.selectDate(today, CalToggle.CloseByDateSel);
-        if (this.opts.inline && today.year !== this.visibleMonth.year || today.month !== this.visibleMonth.monthNbr) {
-            this.visibleMonth = {monthTxt: this.opts.monthLabels[today.month], monthNbr: today.month, year: today.year};
+//         if (this.opts.inline && today.year !== this.visibleMonth.year || today.month !== this.visibleMonth.monthNbr) {
+//             this.visibleMonth = {monthTxt: this.opts.monthLabels[today.month], monthNbr: today.month, year: today.year};
+        this.currentSysYear = this.visibleMonth.year - 543;
+        this.currentThaiYear = today.year + 543;
+
+        if (this.opts.inline && today.year !== this.currentSysYear || today.month !== this.visibleMonth.monthNbr) {
+            this.visibleMonth = {monthTxt: this.opts.monthLabels[today.month], monthNbr: today.month, year: this.currentThaiYear};
             this.generateCalendar(today.month, today.year, true);
         }
     }
